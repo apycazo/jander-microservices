@@ -1,0 +1,6 @@
+spring:
+    application.name: ms-gateway
+    profiles.active: defaults
+    cloud.config:
+        uri: http://localhost:8888/cloud
+        server.prefix: cloud

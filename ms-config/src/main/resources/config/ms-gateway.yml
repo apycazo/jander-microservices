@@ -1,0 +1,10 @@
+# -------------------------------------
+# Zuul service config
+# -------------------------------------
+server.port: 8000
+
+zuul:
+  routes:
+    httpbin:
+      path: /httpbin/**
+      url: https://httpbin.org/

@@ -1,0 +1,17 @@
+# -------------------------------------
+# Discovery service config
+# -------------------------------------
+info:
+  version: 1.0-SNAPSHOT
+# Disable actuator security
+management.security.enabled: false
+# Eureka config
+eureka.instance:
+    preferIpAddress: true
+    statusPageUrlPath: ${management.contextPath:/}info
+    healthCheckUrlPath: ${management.contextPath:/}health
+    # To setup a custom id
+    # instanceId: ${spring.application.name}-${random.uuid}
+    # metadataMap.servicePath: ${nimbus.mapping:/data}
+    leaseRenewalIntervalInSeconds: 30
+    leaseExpirationDurationInSeconds: 30

@@ -1,0 +1,12 @@
+# base info
+spring:
+  application.name: ms-config
+  profiles.active: native
+# server port
+server.port: 8888
+# cloud config
+spring.cloud.config.server:
+  # Configures properties directory, by default it uses git, but can be classpath:.., file://...
+  git.uri: classpath:/config
+  # Avoids clashing with Eureka
+  prefix: cloud

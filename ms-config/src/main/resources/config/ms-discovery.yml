@@ -1,0 +1,16 @@
+# -------------------------------------
+# Discovery service config
+# -------------------------------------
+server.port: 8761
+eureka:
+  environment: deployment
+  datacenter: local
+  server:
+    eviction-interval-timer-in-ms: 5000
+    # for single node only
+    enableSelfPreservation: false
+  client:
+    healthcheck.enabled: true
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl.defaultZone: http://${eureka.instance.hostname:localhost}:${server.port}/eureka/
